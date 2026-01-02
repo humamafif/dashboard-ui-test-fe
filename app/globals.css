@@ -27,6 +27,7 @@
 
   /* BACKGROUND - Icon Circle */
   --color-bg-icon-blue: #e7edff;
+  --color-bg-icon-gray: #f5f7fa;
   --color-bg-icon-yellow: #fff5d9;
   --color-bg-icon-pink: #ffe0eb;
   --color-bg-icon-green: #dcfaf8;
@@ -62,8 +63,8 @@
   --color-text-table-total: #fe5c73;
 
   /* INPUT */
-  --color-input-bg-fill: #f5f7fa;
-  --color-input-text-fill: #8ba3cb;
+  --color-input-bg-filled: #f5f7fa;
+  --color-input-text-filled: #8ba3cb;
 
   --color-input-bg-outline: #ffffff;
   --color-input-text-outline: #718ebf;
@@ -79,11 +80,13 @@
   --color-bg-page: var(--color-bg-page);
   --color-bg-card: var(--color-bg-card);
 
-  --color-text-heading: var(--color-text-heading-primary);
+  --color-text-heading-primary: var(--color-text-heading-primary);
+  --color-text-heading-secondary: var(--color-text-heading-secondary);
   --color-text-body: var(--color-text-body);
   --color-text-muted: var(--color-text-muted);
 
   --font-sans: var(--font-inter-sans);
+  --font-logo: var(--font-mont-heavy);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -96,12 +99,17 @@
 body {
   background: var(--color-bg-page);
   color: var(--color-text-body);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter-sans), var(--font-mont-heavy), Arial, Helvetica,
+    sans-serif;
 }
 
 /* Text */
-.text-heading {
-  color: var(--color-text-heading);
+.text-heading-primary {
+  color: var(--color-text-heading-primary);
+}
+
+.text-heading-secondary {
+  color: var(--color-text-heading-secondary);
 }
 
 .text-body {
