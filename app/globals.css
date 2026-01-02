@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* TEXT - Global */
+  --color-text-heading-primary: #343c6a;
+  --color-text-heading-secondary: #333b69;
+
+  --color-text-body: #232323;
+  --color-text-secondary: #718ebf;
+  --color-text-muted: #8ba3cb;
+
+  /* TEXT - Navigation */
+  --color-text-nav-active: #2d60ff;
+  --color-text-nav-default: #808080;
+
+  /* BACKGROUND - Layout */
+  --color-bg-page: #f5f7fa;
+  --color-bg-sidebar: #ffffff;
+  --color-bg-header: #ffffff;
+
+  /* BACKGROUND - Card */
+  --color-bg-card: #ffffff;
+  --color-bg-card-active: linear-gradient(to right, #4c49ed, #0a06f4);
+
+  /* BACKGROUND - Icon Circle */
+  --color-bg-icon-blue: #e7edff;
+  --color-bg-icon-yellow: #fff5d9;
+  --color-bg-icon-pink: #ffe0eb;
+  --color-bg-icon-green: #dcfaf8;
+
+  /* Icon Color */
+  --color-icon-blue: #396aff;
+  --color-icon-gray: #718ebf;
+  --color-icon-yellow: #ffbb38;
+  --color-icon-pink: #ff82ac;
+  --color-icon-red: #fe5c73;
+  --color-icon-green: #16dbcc;
+  --color-icon-white: #ffffff;
+
+  /* BORDER & DIVIDER */
+  --color-border-primary: #e6eff5;
+  --color-border-strong: #2d60ff;
+  --color-border-secondary: #dfeaf2;
+  --color-border-divider-table: #f2f4f7;
+  --color-border-divider-menu: #ebeef2;
+
+  /* BUTTON */
+  --color-btn-primary-bg: #1814f3;
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-border: #1814f3;
+
+  --color-btn-secondary-bg: #ffffff;
+  --color-btn-secondary-text: #232323;
+  --color-btn-secondary-border: #232323;
+
+  /* TABLE */
+  --color-text-table-header: #718ebf;
+  --color-text-table-body: #232323;
+  --color-text-table-total: #fe5c73;
+
+  /* INPUT */
+  --color-input-bg-fill: #f5f7fa;
+  --color-input-text-fill: #8ba3cb;
+
+  --color-input-bg-outline: #ffffff;
+  --color-input-text-outline: #718ebf;
+
+  /* CHART */
+  --color-chart-green: #16dbcc;
+  --color-chart-red: #ff82ac;
+  --color-chart-blue: #1814f3;
+  --color-chart-divider: #f3f3f5;
+}
+
+@theme inline {
+  --color-bg-page: var(--color-bg-page);
+  --color-bg-card: var(--color-bg-card);
+
+  --color-text-heading: var(--color-text-heading-primary);
+  --color-text-body: var(--color-text-body);
+  --color-text-muted: var(--color-text-muted);
+
+  --font-sans: var(--font-inter-sans);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--color-bg-page);
+  color: var(--color-text-body);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Text */
+.text-heading {
+  color: var(--color-text-heading);
+}
+
+.text-body {
+  color: var(--color-text-body);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* Navigation */
+.text-nav-active {
+  color: var(--color-text-nav-active);
+}
+
+.text-nav-default {
+  color: var(--color-text-nav-default);
+}
+
+/* Layout */
+.bg-page {
+  background-color: var(--color-bg-page);
+}
+
+.bg-card {
+  background-color: var(--color-bg-card);
+}
+
+.bg-sidebar {
+  background-color: var(--color-bg-sidebar);
+}
+
+.bg-card-active {
+  background: var(--color-bg-card-active);
+}
+
+.btn-primary {
+  background-color: var(--color-btn-primary-bg);
+  color: var(--color-btn-primary-text);
+  border: 1px solid var(--color-btn-primary-border);
+}
+
+.btn-secondary {
+  background-color: var(--color-btn-secondary-bg);
+  color: var(--color-btn-secondary-text);
+  border: 1px solid var(--color-btn-secondary-border);
+}
