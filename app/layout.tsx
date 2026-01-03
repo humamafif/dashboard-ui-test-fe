@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Lato } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter-sans",
   subsets: ["latin"],
+});
+
+const lato = Lato({
+  variable: "--font-lato-sans",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
 });
 
 const mont = localFont({
@@ -26,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${mont.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${mont.variable} ${lato.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

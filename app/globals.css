@@ -22,8 +22,8 @@
   --color-bg-header: #ffffff;
 
   /* BACKGROUND - Card */
-  --color-bg-card: #ffffff;
-  --color-bg-card-active: linear-gradient(to right, #4c49ed, #0a06f4);
+  --color-bg-card-default: #ffffff;
+  --color-bg-card-gradient: linear-gradient(to right, #4c49ed, #0a06f4);
 
   /* BACKGROUND - Icon Circle */
   --color-bg-icon-blue: #e7edff;
@@ -78,7 +78,9 @@
 
 @theme inline {
   --color-bg-page: var(--color-bg-page);
-  --color-bg-card: var(--color-bg-card);
+
+  --color-bg-card-default: var(--color-bg-card-default);
+  --color-bg-card-gradient: var(--color-bg-card-gradient);
 
   --color-text-heading-primary: var(--color-text-heading-primary);
   --color-text-heading-secondary: var(--color-text-heading-secondary);
@@ -87,6 +89,7 @@
 
   --font-sans: var(--font-inter-sans);
   --font-logo: var(--font-mont-heavy);
+  --font-lato: var(--font-lato-sans);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -99,8 +102,8 @@
 body {
   background: var(--color-bg-page);
   color: var(--color-text-body);
-  font-family: var(--font-inter-sans), var(--font-mont-heavy), Arial, Helvetica,
-    sans-serif;
+  font-family: var(--font-inter-sans), var(--font-mont-heavy),
+    var(--font-lato-sans), Arial, Helvetica, sans-serif;
 }
 
 /* Text */
@@ -134,16 +137,16 @@ body {
   background-color: var(--color-bg-page);
 }
 
-.bg-card {
-  background-color: var(--color-bg-card);
+.bg-card-default {
+  background-color: var(--color-bg-card-default);
+}
+
+.bg-card-gradient {
+  background: var(--color-bg-card-gradient);
 }
 
 .bg-sidebar {
   background-color: var(--color-bg-sidebar);
-}
-
-.bg-card-active {
-  background: var(--color-bg-card-active);
 }
 
 .btn-primary {
