@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function LogoSidebar() {
   return (
-    <div className="flex ml-6.75 items-center w-full">
+    <div className="flex xl:ml-9.5 ml-6.75 items-center w-fit ">
       <Image
         src="/logo.svg"
         alt="Logo"

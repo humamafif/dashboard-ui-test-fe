@@ -13,9 +13,15 @@ export default function RecipientItem({
 }: RecipientItemProps) {
   return (
     <div className="flex flex-col items-center justify-center font-normal hover:font-extrabold">
-      <ProfileCircle alt={alt} path={path} className="size-[70px] mb-[12px]" />
-      <p className="text-text-body text-[16px]">{name}</p>
-      <p className="text-(--color-text-secondary) text-[15px] ">{role}</p>
+      <ProfileCircle
+        alt={alt}
+        path={path}
+        className="xl:size-[70px] size-[50px] mb-[12px] xl:mb-[15px]"
+      />
+      <p className="text-text-body xl:text-[16px] text-[12px]">{name}</p>
+      <p className="text-(--color-text-secondary) xl:text-[15px] text-[12px] ">
+        {role}
+      </p>
     </div>
   );
 }

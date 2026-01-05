@@ -4,7 +4,7 @@ import RecentTransaction from "../components/recent-transaction";
 export function RecentTransactionSection() {
   return (
     <OverviewSectionLayout title="Recent Transaction">
-      <div className="flex h-58.75 flex-col justify-between rounded-[25px] bg-white p-6.25">
+      <div className="flex xl:h-58.75 lg:h-[170px] h-[214px] flex-col justify-between rounded-[25px] bg-white xl:p-6.25 lg:p-[15px] py-[20px] px-[18px]">
         <RecentTransaction
           typeTransaction="card"
           date="28 January 2021"

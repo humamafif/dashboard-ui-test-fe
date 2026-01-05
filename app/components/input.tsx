@@ -37,13 +37,13 @@ export default function Input({
 
   return (
     <div
-      className={`h-12.5 w-63.75 bg-(--color-input-bg-${variant}) rounded-full flex items-center px-6.25 ${containerClass} ${className}`}
+      className={`xl:h-12.5 h-[40px] bg-(--color-input-bg-${variant}) rounded-full flex items-center xl:px-6.25 px-5  ${containerClass} ${className}`}
     >
-      <Icon className={`size-4 shrink-0 ${iconClass}`} />
+      <Icon className={`size-4 xl:size-[20px] shrink-0 ${iconClass}`} />
 
       <input
         {...props}
-        className="ml-3.75 w-full bg-transparent outline-none text-[15px]"
+        className="ml-3.75 w-full bg-transparent outline-none xl:text-[15px] lg:text-[12px] text-[13px]"
       />
     </div>
   );

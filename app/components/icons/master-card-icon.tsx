@@ -2,7 +2,7 @@ export function MasterCardIcon({ className }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 44 30"
+      viewBox="0 0 45 32"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >

@@ -35,8 +35,8 @@ export default function RecipientList() {
           role={recipient.role}
         />
       ))}
-      <button className="size-[50px] bg-white rounded-full flex items-center justify-center shadow-[4px_4px_18px_-2px_rgba(231,228,232,0.8)]">
-        <ChevronRightIcon className="h-[13px] text-transparent" />
+      <button className="size-[40px] xl:size-[50px] bg-white rounded-full flex items-center justify-center shadow-[4px_4px_18px_-2px_rgba(231,228,232,0.8)]">
+        <ChevronRightIcon className="h-[13px] xl:h-[22px] text-transparent" />
       </button>
     </div>
   );

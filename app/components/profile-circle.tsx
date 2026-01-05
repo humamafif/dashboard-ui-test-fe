@@ -13,14 +13,15 @@ export default function ProfileCircle({
 }: ProfileCircleProps) {
   return (
     <div
-      className={`rounded-full relative overflow-hidden items-center aspect-square ${className}`}
+      className={`relative overflow-hidden rounded-full aspect-square flex items-center justify-center ${className}`}
     >
       <Image
         src={path}
         alt={alt}
         width={500}
         height={500}
-        className="object-cover"
+        // object-cover sangat penting agar gambar tidak gepeng saat dipotong bulat
+        className="object-cover w-full h-full"
       />
     </div>
   );

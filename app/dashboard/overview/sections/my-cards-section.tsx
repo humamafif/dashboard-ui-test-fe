@@ -6,8 +6,12 @@ import { OverviewSectionLayout } from "../components/overview-section-layout";
 export function MyCardsSection() {
   const [activeCardId, setActiveCardId] = useState<string | null>("card-1");
   return (
-    <OverviewSectionLayout title="My Cards" className="col-span-2">
-      <div className="flex h-58.75 justify-between gap-7.5">
+    <OverviewSectionLayout
+      title="My Cards"
+      className="col-span-2"
+      actionLabel="See All"
+    >
+      <div className="flex xl:h-58.75 h-[170px] xl:gap-7.5 lg:gap-[25px] gap-5 overflow-x-auto  -mx-6 px-6 lg:mx-0 lg:px-0 lg:overflow-visible lg:justify-between lg:flex-nowrap">
         <CreditCard
           id="card-1"
           balance="$5,756"

@@ -25,7 +25,7 @@ export function CreditCard({
       type="button"
       aria-pressed={isActive}
       onClick={() => onClick(id)}
-      className={`relative rounded-[25px] w-1/2 h-full pt-6 pb-5 pr-6 pl-6.5 flex flex-col justify-between font-lato hover:cursor-pointer items-start
+      className={`relative rounded-[25px] shrink-0 lg:shrink w-[265px] xl:w-full h-full xl:pt-6 pt-4.25 xl:pb-5 pb-[16px] xl:pr-6 px-5 xl:pl-6.5 flex flex-col justify-between font-lato hover:cursor-pointer items-start
         ${
           isActive
             ? "bg-card-gradient"
@@ -37,28 +37,33 @@ export function CreditCard({
       <div className="flex w-full justify-between">
         <div className="flex flex-col justify-center items-start">
           <p
-            className={`font-normal text-[12px] ${
+            className={`font-normal xl:text-[12px] text-[11px]  ${
               isActive ? "text-white" : "text-(--color-text-secondary)"
             }`}
           >
             Balance
           </p>
           <p
-            className={`font-semibold text-[20px] ${
+            className={`font-semibold xl:text-[20px] text-[16px] ${
               isActive ? "text-white" : "text-heading-primary"
             }`}
           >
             {balance}
           </p>
         </div>
-        <EmvChipImage className="size-8.5 text-white" aria-hidden />
+        <EmvChipImage
+          className={`xl:size-8.5 size-7.25 ${
+            isActive ? "text-white" : "text-body"
+          }`}
+          aria-hidden
+        />
       </div>
 
       {/* Meta */}
       <div className="grid grid-cols-2 justify-between w-full">
         <div className="flex flex-col items-start">
           <p
-            className={`uppercase text-[12px] font-normal ${
+            className={`uppercase text-[10px] xl:text-[12px] font-normal ${
               isActive
                 ? "text-white opacity-70"
                 : "text-(--color-text-secondary)"
@@ -67,7 +72,7 @@ export function CreditCard({
             Card Holder
           </p>
           <p
-            className={`text-[15px] font-semibold ${
+            className={`text-[13px] xl:text-[15px] font-semibold ${
               isActive ? "text-white" : "text-heading-primary"
             }`}
           >
@@ -76,7 +81,7 @@ export function CreditCard({
         </div>
         <div className="flex flex-col items-start">
           <p
-            className={`uppercase text-[12px] font-normal ${
+            className={`uppercase text-[10px] xl:text-[12px] font-normal ${
               isActive
                 ? "text-white opacity-70"
                 : "text-(--color-text-secondary)"
@@ -85,7 +90,7 @@ export function CreditCard({
             Valid THRU
           </p>
           <p
-            className={`text-[15px] font-semibold ${
+            className={`text-[13px] xl:text-[15px] font-semibold ${
               isActive ? "text-white" : "text-heading-primary"
             }`}
           >
@@ -96,7 +101,7 @@ export function CreditCard({
 
       {/* Overlay */}
       <div
-        className={`absolute bottom-0 left-0 h-17.5 w-full  rounded-b-[25px] pointer-events-none 
+        className={`absolute bottom-0 left-0 xl:h-17.5 h-[51px] w-full  rounded-b-[25px] pointer-events-none 
             ${
               isActive
                 ? "border-none opacity-20 bg-linear-to-b from-white to-transparent"
@@ -107,14 +112,16 @@ export function CreditCard({
       {/* Footer */}
       <div className="flex justify-between items-center w-full">
         <p
-          className={`text-[22px] font-semibold ${
+          className={`text-[15px] xl:text-[22px] font-semibold ${
             isActive ? "text-white" : "text-heading-primary"
           }`}
         >
           {cardNumber}
         </p>
         <MasterCardIcon
-          className={`w-11 h-7.5 ${isActive ? "text-white" : "text-[#9199af]"}`}
+          className={`w-fit xl:h-7.5 h-[18px] ${
+            isActive ? "text-white" : "text-[#9199af]"
+          }`}
           aria-hidden
         />
       </div>

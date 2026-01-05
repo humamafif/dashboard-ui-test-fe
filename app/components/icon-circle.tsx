@@ -36,9 +36,11 @@ export default function IconCircle({
 
   return (
     <div
-      className={`flex items-center justify-center rounded-full transition-colors ${bgClass} ${className}`}
+      className={`flex items-center justify-center rounded-full ${bgClass} ${className} aspect-square`}
     >
-      <Icon className={`size-6.25 m-3 ${iconClass}`} />
+      <span className="flex items-center justify-center w-full h-full">
+        <Icon className={`xl:size-6.25 size-4.5 block ${iconClass}`} />
+      </span>
     </div>
   );
 }

@@ -2,102 +2,62 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { DashboardIcon } from "@/app/components/icons/dashboard-icon";
-import { TransactionIcon } from "@/app/components/icons/transaction-icon";
-import { AccountIcon } from "@/app/components/icons/account-icon";
-import { InvestmentIcon } from "@/app/components/icons/invesment-icon";
-import { CreditCardIcon } from "@/app/components/icons/credit-card-icon";
-import { LoanIcon } from "@/app/components/icons/loan-icon";
-import { ServiceIcon } from "@/app/components/icons/service-icon";
-import { MyPrivilegeIcon } from "@/app/components/icons/my-privilege-icon";
-import { SettingFillIcon } from "@/app/components/icons/setting-fill-icon";
-import LogoSidebar from "./logo-sidebar";
 
-export default function Sidebar() {
+import LogoSidebar from "./logo-sidebar";
+import { MENUS } from "@/app/constants/menu";
+
+type SidebarProps = {
+  isOpen?: boolean;
+  onClose?: () => void;
+};
+
+export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname();
 
-  const menus = [
-    {
-      id: "overview",
-      label: "Dashboard",
-      href: "/dashboard/overview",
-      icon: DashboardIcon,
-    },
-    {
-      id: "transactions",
-      label: "Transactions",
-      href: "/dashboard/transactions",
-      icon: TransactionIcon,
-    },
-    {
-      id: "accounts",
-      label: "Accounts",
-      href: "/dashboard/accounts",
-      icon: AccountIcon,
-    },
-    {
-      id: "investments",
-      label: "Investments",
-      href: "/dashboard/investments",
-      icon: InvestmentIcon,
-    },
-    {
-      id: "credit-cards",
-      label: "Credit Cards",
-      href: "/dashboard/credit-cards",
-      icon: CreditCardIcon,
-    },
-    { id: "loans", label: "Loans", href: "/dashboard/loans", icon: LoanIcon },
-    {
-      id: "services",
-      label: "Services",
-      href: "/dashboard/services",
-      icon: ServiceIcon,
-    },
-    {
-      id: "my-privileges",
-      label: "My Privileges",
-      href: "/dashboard/my-privileges",
-      icon: MyPrivilegeIcon,
-    },
-    {
-      id: "setting",
-      label: "Setting",
-      href: "/dashboard/setting",
-      icon: SettingFillIcon,
-    },
-  ];
-
   return (
-    <div className="bg-(--color-bg-sidebar) h-full pt-8.5 min-w-62.5 border-r border-(--color-border-primary) hidden md:block">
-      <LogoSidebar />
+    <>
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={onClose}
+        />
+      )}
+      <div
+        className={`
+        fixed inset-y-0 left-0 z-50 transform bg-(--color-bg-sidebar) h-full pt-8.5 xl:w-62.5 w-[230px] border-r border-(--color-border-primary) transition-transform duration-300 ease-in-out
+        lg:relative lg:translate-x-0 lg:block
+        ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
+      `}
+      >
+        <LogoSidebar />
 
-      <nav className="mt-12 flex flex-col gap-1">
-        {menus.map((menu) => {
-          const isActive = pathname.startsWith(menu.href);
-          const Icon = menu.icon;
-
-          return (
-            <Link
-              key={menu.id}
-              href={menu.href}
-              className={`relative flex items-center py-4 pl-11
-                ${
+        <nav className="mt-12 flex flex-col gap-1">
+          {MENUS.map((menu) => {
+            const isActive = pathname.startsWith(menu.href);
+            const Icon = menu.icon;
+            return (
+              <Link
+                key={menu.id}
+                href={menu.href}
+                onClick={onClose}
+                className={`relative flex items-center xl:py-4 py-[15px] xl:pl-11 pl-[30px] ${
                   isActive
                     ? "text-(--color-text-nav-active)"
                     : "text-(--color-text-nav-default) hover:bg-slate-50"
                 }`}
-            >
-              {isActive && (
-                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-(--color-text-nav-active) rounded-r-full" />
-              )}
-
-              <Icon className="w-6 h-6 mr-5" />
-              <span className="font-medium text-lg">{menu.label}</span>
-            </Link>
-          );
-        })}
-      </nav>
-    </div>
+              >
+                {isActive && (
+                  <div className="absolute left-0 top-0 bottom-0 xl:w-1.5 w-[5px] bg-(--color-text-nav-active) rounded-r-full" />
+                )}
+                <Icon className="xl:size[25px] size-5 mr-5 xl:mr-6.5" />
+                <span className="font-medium xl:text-lg text-base">
+                  {menu.label}
+                </span>
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
+    </>
   );
 }

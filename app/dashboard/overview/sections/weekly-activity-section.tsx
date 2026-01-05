@@ -5,8 +5,8 @@ import BarChart from "../components/bar-chart";
 export function WeeklyActivitySection() {
   return (
     <OverviewSectionLayout title="Weekly Activity" className="col-span-2">
-      <div className="h-80.5 rounded-[25px] py-[28px] pl-[33px] pr-[30px] bg-white flex flex-col justify-between">
-        <div className=" flex justify-end">
+      <div className="xl:h-80.5 lg:h-[261px] h-[254px] rounded-[25px] py-[17px] xl:py-[28px] xl:px-[30px] px-[18px] lg:px-[22px] bg-white flex flex-col justify-between">
+        <div className="flex justify-end">
           <ChartLegend />
         </div>
         <BarChart />

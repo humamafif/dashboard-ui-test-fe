@@ -46,27 +46,27 @@ export default function RecentTransaction({
   const transaction = TRANSACTION_MAP[typeTransaction];
 
   return (
-    <div className=" flex w-full items-center gap-4.25">
+    <div className=" flex w-full items-center xl:gap-4.25 lg:gap-[8px] gap-[15px] ">
       {/* circle icon */}
       <div
-        className={`aspect-square rounded-full size-13.75 bg-(--color-bg-icon-${transaction.backgroundIcon}) items-center justify-center flex`}
+        className={`aspect-square rounded-full xl:size-13.75 size-[50px] lg:size-[40px] bg-(--color-bg-icon-${transaction.backgroundIcon}) items-center justify-center flex`}
       >
         <transaction.icon
-          className={`size-7 text-(--color-icon-${transaction.colorIcon})`}
+          className={`xl:size-7 size-[25px] lg:size-[20] text-(--color-icon-${transaction.colorIcon})`}
         />
       </div>
       {/* data */}
       <div className="flex justify-between w-full items-center">
         <div className="flex flex-col">
-          <p className="text-[16px] text-text-body font-medium">
+          <p className="xl:text-[16px] lg:text-[13px] text-[14px] text-text-body font-medium line-clamp-1">
             {transaction.description}
           </p>
-          <p className="font-normal text-(--color-text-secondary) text-[15px]">
+          <p className="font-normal text-(--color-text-secondary) xl:text-[15px] text-[12px]">
             {date}
           </p>
         </div>
         <p
-          className={`font-medium text-[16px] ${
+          className={`font-medium xl:text-[16px] text-[11px] ${
             amount < 0 ? "text-(--color-text-red)" : "text-(--color-text-green)"
           }`}
         >
