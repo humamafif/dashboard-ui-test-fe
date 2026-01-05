@@ -37,7 +37,7 @@ export default function Header() {
 
         {/* profile */}
         <ProfileCircle
-          path="/assets/profile.jpg"
+          path="/assets/img/profile.jpg"
           alt="profile"
           className="size-15 ml-1.25"
         />

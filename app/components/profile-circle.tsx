@@ -13,7 +13,7 @@ export default function ProfileCircle({
 }: ProfileCircleProps) {
   return (
     <div
-      className={`rounded-full relative overflow-hidden items-center ${className}`}
+      className={`rounded-full relative overflow-hidden items-center aspect-square ${className}`}
     >
       <Image
         src={path}

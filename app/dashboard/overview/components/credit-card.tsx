@@ -1,5 +1,5 @@
-import { EmvChipImage } from "./emv-chip-image";
-import { MasterCardIcon } from "./icons/master-card-icon";
+import { EmvChipImage } from "../../../components/emv-chip-image";
+import { MasterCardIcon } from "../../../components/icons/master-card-icon";
 
 interface CreditCardProps {
   id: string;
@@ -25,7 +25,7 @@ export function CreditCard({
       type="button"
       aria-pressed={isActive}
       onClick={() => onClick(id)}
-      className={`relative rounded-[25px] w-1/2 h-58.75 pt-6 pb-5 pr-6 pl-6.5 flex flex-col justify-between font-lato hover:cursor-pointer items-start
+      className={`relative rounded-[25px] w-1/2 h-full pt-6 pb-5 pr-6 pl-6.5 flex flex-col justify-between font-lato hover:cursor-pointer items-start
         ${
           isActive
             ? "bg-card-gradient"

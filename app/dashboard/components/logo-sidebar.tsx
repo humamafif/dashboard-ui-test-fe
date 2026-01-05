@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Logo() {
+export default function LogoSidebar() {
   return (
     <div className="flex ml-6.75 items-center w-full">
       <Image
