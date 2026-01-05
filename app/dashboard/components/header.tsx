@@ -49,12 +49,14 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           colorBg="gray"
           icon={SettingOutlineIcon}
           className="xl:size-12.5 lg:size-10 hidden lg:block"
+          iconClassName="xl:size-6.25 size-4.5"
         />
         <IconCircle
           colorIcon="red"
           colorBg="gray"
           icon={NotificationIcon}
           className="xl:size-12.5 lg:size-10 hidden lg:block"
+          iconClassName="xl:size-6.25 size-4.5"
         />
       </div>
     </header>

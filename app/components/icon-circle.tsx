@@ -3,6 +3,7 @@ import React from "react";
 interface IconCircleProps {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   className?: string;
+  iconClassName?: string;
   colorIcon: IconColor;
   colorBg: BaseColor;
 }
@@ -27,6 +28,7 @@ const iconVariants: Record<IconColor, string> = {
 
 export default function IconCircle({
   className = "",
+  iconClassName = "",
   icon: Icon,
   colorIcon,
   colorBg,
@@ -39,7 +41,7 @@ export default function IconCircle({
       className={`flex items-center justify-center rounded-full ${bgClass} ${className} aspect-square`}
     >
       <span className="flex items-center justify-center w-full h-full">
-        <Icon className={`xl:size-6.25 size-4.5 block ${iconClass}`} />
+        <Icon className={`block ${iconClass} ${iconClassName}`} />
       </span>
     </div>
   );

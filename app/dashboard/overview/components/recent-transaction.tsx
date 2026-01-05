@@ -70,7 +70,7 @@ export default function RecentTransaction({
             amount < 0 ? "text-(--color-text-red)" : "text-(--color-text-green)"
           }`}
         >
-          {formatAmount(amount)}
+          {formatAmount(amount, true)}
         </p>
       </div>
     </div>

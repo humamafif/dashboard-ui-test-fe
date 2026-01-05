@@ -1,0 +1,68 @@
+import { LoanData } from "../types/loans-data";
+
+export const loansData: LoanData[] = [
+  {
+    slNo: "01.",
+    loanMoney: 100000,
+    leftToRepay: 40500,
+    duration: "8 Months",
+    interestRate: "12%",
+    installment: 2000,
+  },
+  {
+    slNo: "02.",
+    loanMoney: 500000,
+    leftToRepay: 250000,
+    duration: "36 Months",
+    interestRate: "10%",
+    installment: 8000,
+  },
+  {
+    slNo: "03.",
+    loanMoney: 900000,
+    leftToRepay: 40500,
+    duration: "12 Months",
+    interestRate: "12%",
+    installment: 5000,
+  },
+  {
+    slNo: "04.",
+    loanMoney: 50000,
+    leftToRepay: 40500,
+    duration: "25 Months",
+    interestRate: "5%",
+    installment: 2000,
+  },
+  {
+    slNo: "05.",
+    loanMoney: 50000,
+    leftToRepay: 40500,
+    duration: "5 Months",
+    interestRate: "16%",
+    installment: 10000,
+  },
+  {
+    slNo: "06.",
+    loanMoney: 80000,
+    leftToRepay: 25500,
+    duration: "14 Months",
+    interestRate: "8%",
+    installment: 2000,
+  },
+  {
+    slNo: "07.",
+    loanMoney: 12000,
+    leftToRepay: 5500,
+    duration: "9 Months",
+    interestRate: "13%",
+    installment: 500,
+  },
+  {
+    slNo: "08.",
+    loanMoney: 160000,
+    leftToRepay: 100800,
+    duration: "3 Months",
+    interestRate: "12%",
+    installment: 900,
+  },
+];
