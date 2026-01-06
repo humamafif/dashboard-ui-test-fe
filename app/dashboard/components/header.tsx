@@ -40,7 +40,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           icon={SearchIcon}
           placeholder="Search for something..."
           type="text"
-          className="w-full"
+          className="w-full rounded-full"
         />
 
         {/* Settings & Notification */}
