@@ -3,6 +3,7 @@ import { useState } from "react";
 import TabBar from "./tab-bar";
 import ProfileForm from "./form/profile-form";
 import PreferenceForm from "./form/preference-form";
+import SecurityForm from "./form/security-form";
 
 const SettingSection = () => {
   const [activeTab, setActiveTab] = useState("Edit Profile");
@@ -15,6 +16,8 @@ const SettingSection = () => {
         <ProfileForm />
       ) : activeTab === "Preferences" ? (
         <PreferenceForm />
+      ) : activeTab === "Security" ? (
+        <SecurityForm />
       ) : (
         <div className="py-20 text-center text-slate-400">
           Konten untuk {activeTab} belum tersedia.
