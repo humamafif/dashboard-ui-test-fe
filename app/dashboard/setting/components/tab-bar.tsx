@@ -17,7 +17,7 @@ const TabBar: React.FC<TabBarProps> = ({ activeTab, setActiveTab }) => {
         >
           <button
             onClick={() => setActiveTab(tab)}
-            className={`text-[13px] lg:text-[12px] xl:text-[15px] font-medium transition-all whitespace-nowrap pb-[7px] lg:pb-[9px] xl:pb-[8px] ${
+            className={`text-[13px] lg:text-[12px] xl:text-[15px] font-medium transition-all whitespace-nowrap pb-[7px] lg:pb-[9px] xl:pb-[8px] cursor-pointer ${
               activeTab === tab
                 ? "text-[#1814F3]"
                 : "text-[#718EBF] hover:text-slate-600"

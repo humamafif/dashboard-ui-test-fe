@@ -93,7 +93,7 @@ const BalanceHistoryChart = () => {
         </svg>
 
         {/* X Axis */}
-        <div className="absolute -bottom-2 left-0 w-full flex justify-between text-[14px] text-[#718EBF]">
+        <div className="absolute -bottom-2 left-0 w-full flex justify-between lg:text-[14px] text-[12px] text-[#718EBF]">
           {data.map((d) => (
             <span key={d.label}>{d.label}</span>
           ))}

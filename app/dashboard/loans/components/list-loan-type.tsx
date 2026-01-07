@@ -38,7 +38,7 @@ const loanTypeData: LoanTypeCardProps[] = [
 
 export default function ListLoanType() {
   return (
-    <div className="flex h-[85] lg:h-[90px] xl:h-[120px] gap-[15px] lg:gap-[25px] xl:gap-[30px] overflow-x-auto ">
+    <div className="flex h-[85] lg:h-[90px] xl:h-[120px] gap-[15px] lg:gap-[25px] xl:gap-[30px] overflow-x-auto [scrollbar-width:none]">
       {/* LOAN TYPE CARD */}
       {loanTypeData.map((item) => (
         <LoanTypeCard

@@ -3,8 +3,8 @@ import { DashboardIcon } from "../components/icons/dashboard-icon";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[80vh] text-center p-6 animate-in fade-in zoom-in duration-500">
-      <div className="w-full max-w-sm mb-8">
+    <div className="flex flex-col items-center justify-center min-h-[70vh] lg:min-h-[80vh] text-center p-6 animate-in fade-in zoom-in duration-500">
+      <div className="w-full max-w-[280px] md:max-w-sm lg:max-w-md xl:max-w-lg mb-8 lg:mb-12">
         <svg
           viewBox="0 0 400 300"
           fill="none"
@@ -55,22 +55,22 @@ export default function NotFound() {
         </svg>
       </div>
 
-      <div className="space-y-4 max-w-lg">
-        <h2 className="text-2xl font-extrabold text-heading-primary tracking-tight">
+      <div className="space-y-4 max-w-lg lg:max-w-2xl">
+        <h2 className="text-xl  lg:text-2xl xl:text-3xl font-extrabold text-heading-primary tracking-tight">
           Oops! Page Not Found
         </h2>
-        <p className="text-muted text-md lg:text-lg leading-relaxed">
+        <p className="text-muted text-sm lg:text-lg leading-relaxed">
           It looks like you've ventured into uncharted territory. The page you
           are looking for doesn't exist or has been moved.
         </p>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-8 lg:mt-12">
         <Link
           href="/dashboard"
-          className="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-xl text-lg font-medium shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+          className="btn-primary inline-flex items-center gap-2 px-6 py-3 lg:px-8 lg:py-4 rounded-xl text-sm lg:text-lg font-medium shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
         >
-          <DashboardIcon className="size-5" />
+          <DashboardIcon className="size-5 lg:size-6" />
           Back to Dashboard
         </Link>
       </div>

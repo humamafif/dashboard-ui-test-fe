@@ -23,6 +23,9 @@ const mont = localFont({
 export const metadata: Metadata = {
   title: "Frontend Test",
   description: "A frontend test project using Next.js and TypeScript.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

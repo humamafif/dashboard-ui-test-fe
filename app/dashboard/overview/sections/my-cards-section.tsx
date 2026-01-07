@@ -11,7 +11,7 @@ export function MyCardsSection() {
       className="col-span-2"
       actionLabel="See All"
     >
-      <div className="flex xl:h-58.75 h-[170px] xl:gap-7.5 lg:gap-[25px] gap-5 overflow-x-auto  -mx-6 px-6 lg:mx-0 lg:px-0 lg:overflow-visible lg:justify-between lg:flex-nowrap">
+      <div className="flex xl:h-58.75 h-[170px] xl:gap-7.5 lg:gap-[25px] gap-5 overflow-x-auto  -mx-6 px-6 lg:mx-0 lg:px-0 lg:overflow-visible lg:justify-between lg:flex-nowrap [scrollbar-width:none]">
         <CreditCard
           id="card-1"
           balance="$5,756"

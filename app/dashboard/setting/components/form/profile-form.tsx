@@ -14,7 +14,7 @@ const ProfileForm = () => {
         <div className="shrink-0 flex justify-center lg:block">
           <div className="relative size-[170px] lg:size-[110px] xl:size-[130px] items-center justify-center">
             <ProfileCircle path="/assets/img/profile.jpg" alt="Profile" />
-            <button className="absolute xl:bottom-4 lg:bottom-3 bottom-5 -right-1 btn-primary p-[10px] lg:p-[7px] rounded-full shadow-md">
+            <button className="absolute xl:bottom-4 lg:bottom-3 bottom-5 -right-1 btn-primary p-[10px] lg:p-[7px] rounded-full shadow-md cursor-pointer">
               <PencilIcon className="size-[18px] xl:size-[15px] lg:size-[12px]" />
             </button>
           </div>

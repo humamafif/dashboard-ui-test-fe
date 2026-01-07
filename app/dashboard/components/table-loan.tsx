@@ -51,7 +51,7 @@ const ActiveLoansTable: React.FC = () => {
                 </td>
                 <td className="py-4 xl:py-5">
                   <div className="flex justify-end">
-                    <button className="border hover:border-(--color-btn-primary-border) hover:text-(--color-btn-primary-border) rounded-full transition-all border-text-body text-text-body w-[70px] h-[25px] lg:w-[80px] lg:h-[30px] xl:w-[100px] xl:h-[35px] flex items-center justify-center">
+                    <button className="border hover:border-(--color-btn-primary-border) hover:text-(--color-btn-primary-border) rounded-full transition-all border-text-body text-text-body w-[70px] h-[25px] lg:w-[80px] lg:h-[30px] xl:w-[100px] xl:h-[35px] flex items-center justify-center cursor-pointer">
                       Repay
                     </button>
                   </div>
